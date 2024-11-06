@@ -1,4 +1,4 @@
-#weather-widget {
+#weather-widget{
     border: 1px solid #ccc;
     padding: 10px;
     width: 200px;
@@ -6,21 +6,10 @@
     font-family: Arial, sans-serif;
 }
 
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'heliosextc';
-    src: url('../fonts/heliosextc.otf');
-}
-
-@font-face {
-    font-family: 'PlusJakartaSans-Medium';
-    src: url('../fonts/PlusJakartaSans-Medium.ttf');
 }
 
 .flex{
@@ -29,9 +18,7 @@
 
 /* MAIN */
 
-
-
-.main {
+.main{
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -41,19 +28,16 @@
     background-repeat: no-repeat;
 }
 
-
-
 .main__title{
-    font-family: 'heliosextc', sans-serif;
     padding-bottom: 35px;
-    text-align: center;
 }
 
 .main__title h1{
     font-size: 80px;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 768px){
     .main__title h1{
         font-size: 50px;
     }
@@ -66,7 +50,7 @@
 }
 
 @media (max-width: 320px){
-    #weather-widget {
+    #weather-widget{
         width: 130px;
     }
     .main__title h1{

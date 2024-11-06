@@ -1,15 +1,15 @@
-const apiKey = 'ВАШ API KEYS';
-const city = 'Хабаровск';
+const apiKey = '#';
+const city = '#';
 
 async function getWeather() {
-    try {
+    try{
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
         const data = await response.json();
 
         if (data.cod === 200) {
-            document.getElementById('weather').innerHTML = `Температура: ${data.main.temp}°C, ${data.weather[0].description}`;
+            document.getElementById('weather').innerHTML = `Температура: ${data.main.temp}C, ${data.weather[0].description}`;
         } else {
-            document.getElementById('weather').innerHTML = 'Ошибка получения погоды: ' + data.message;
+            document.getElementById('weather').innerHTML = `Ошибка получения погоды: ` + data.message;
         }
     } catch (error) {
         document.getElementById('weather').innerHTML = 'Ошибка получения погоды: ' + error.message;
@@ -19,11 +19,8 @@ async function getWeather() {
 function updateTime() {
     const now = new Date();
     const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
-    document.getElementById('time').innerHTML = now.toLocaleTimeString([], options);
+    document.getElementById('time').innerHTML = now.toLocaleDateString([], options);
 }
 
-// Обновляем время каждую секунду
 setInterval(updateTime, 1000);
-
-// Получаем погоду
 getWeather();
